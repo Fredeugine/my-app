@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export class Age extends React.Component {
     render() {
         const { age } = this.props;
@@ -11,7 +12,8 @@ export class Welcome extends React.Component {
     render() {
 
         const { name, age } = this.props;
-        if (age > 18){
+        //if prop is present
+        if (age){
             return (
                 <div>
                     <p>Welcome, {name}!</p>
@@ -31,8 +33,3 @@ export class Welcome extends React.Component {
     }
 }
 
-
-Welcome.defaultProps = {
-    name: 'Guest',
-    age: '10-20'
-};
