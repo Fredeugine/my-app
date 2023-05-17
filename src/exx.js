@@ -11,7 +11,7 @@ export class Welcome extends React.Component {
     render() {
 
         const { name, age } = this.props;
-        if (age > 18){
+        if (age > 18 && age < 65){
             return (
                 <div>
                     <p>Welcome, {name}!</p>

@@ -9,7 +9,7 @@ function hello() {
       <div className="App">
         <h1>HELLO</h1>
           {message()}
-          <Welcome name={<strong>Lucy</strong>} age={20}></Welcome>
+          <Welcome name={<strong>Lucy</strong>} age={70}></Welcome>
 
       </div>
 
