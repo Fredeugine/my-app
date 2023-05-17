@@ -4,13 +4,15 @@ import {message} from "./App";
 
 export class Welcome extends React.Component {
     render() {
-        const { name } = this.props;
+        const { name,age } = this.props;
         return <div>
             {message()}
             <p>Welcome, {name}!</p>
+            <p>Your age is {age}</p>
         </div>
     }
 }
 Welcome.defaultProps = {
-    name: 'Guest'
+    name: 'Guest',
+    age: '10-20'
 };
