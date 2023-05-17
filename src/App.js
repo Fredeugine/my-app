@@ -8,7 +8,7 @@ function hello() {
   return (
       <div className="App">
         <h1>HELLO</h1>
-          <Welcome name={<strong>Lucy</strong>}></Welcome>
+          <Welcome name={<strong>Lucy</strong>} age='8'></Welcome>
       </div>
 
   );
