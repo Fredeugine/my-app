@@ -8,7 +8,7 @@ function hello() {
   return (
       <div className="App">
         <h1>HELLO</h1>
-        <Welcome name='Akwasi'></Welcome>
+        <Welcome></Welcome>
       </div>
 
   );
