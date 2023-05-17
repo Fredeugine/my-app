@@ -1,5 +1,4 @@
 import React from "react";
-import {message} from "./App";
 
 
 
@@ -13,14 +12,25 @@ export class Age extends React.Component {
 
 export class Welcome extends React.Component {
     render() {
-        {message()}
+
         const { name, age } = this.props;
-        return (
-            <div>
-                <p>Welcome, {name}!</p>
-                <Age age={age} />
-            </div>
-        );
+        if (age >18 ){
+            return (
+                <div>
+                    <p>Welcome, {name}!</p>
+                    <div><Age age={age} /></div>
+                </div>
+            );
+        }
+        else {
+            return (
+                <div>
+                    <p>Welcome, {name}!</p>
+                </div>
+            );
+        }
+
+
     }
 }
 
