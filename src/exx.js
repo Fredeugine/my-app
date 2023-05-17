@@ -12,6 +12,7 @@ export class Welcome extends React.Component {
         </div>
     }
 }
+
 Welcome.defaultProps = {
     name: 'Guest',
     age: '10-20'
