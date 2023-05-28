@@ -1,4 +1,5 @@
-import React from "react";
+import React, {Component, useEffect} from "react";
+import {useState} from "react";
 
 export class Age extends React.Component {
     render() {
@@ -34,7 +35,6 @@ export class Welcome extends React.Component {
             );
         }
 
-
     }
 }
 
@@ -43,3 +43,30 @@ Welcome.defaultProps = {
     name: 'Guest',
     age: '10-20'
 };
+
+
+
+
+export function Counter() {
+    const [count, setCount] = useState(0);
+
+    useEffect(function ()  {
+       var countInc = setInterval(function() {
+            setCount(function (prevCount){
+                return prevCount + 1
+            });
+        }, 1000);
+
+        return () => {
+            clearInterval(countInc)
+        };
+    });
+
+    return (
+        <div>
+            <h1>Count: {count}</h1>
+        </div>
+    );
+}
+
+export default Counter;

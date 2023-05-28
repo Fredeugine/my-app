@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
-import {Welcome} from "./exx";
-
+import {Welcome} from "./welcome";
+import {Counter} from "./welcome";
 
 
 function hello() {
@@ -10,6 +10,7 @@ function hello() {
         <h1>HELLO</h1>
           {message()}
           <Welcome name={<strong>John</strong>} age={16}></Welcome>
+          <Counter></Counter>
 
       </div>
 
