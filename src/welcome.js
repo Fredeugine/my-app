@@ -47,17 +47,17 @@ Welcome.defaultProps = {
 
 
 
-export function Counter() {
-    const [count, setCount] = useState(0);
+export function Counter({initVal,incInv,incAm}) {
+    const [count, setCount] = useState(initVal);
 
     useEffect(function ()  {
        var countInc = setInterval(function() {
             setCount(function (prevCount){
-                return prevCount + 1
+                return prevCount + incAm
             });
-        }, 1000);
+        }, incInv);
 
-        return () => {
+        return function () {
             clearInterval(countInc)
         };
     });

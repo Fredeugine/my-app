@@ -10,7 +10,7 @@ function hello() {
         <h1>HELLO</h1>
           {message()}
           <Welcome name={<strong>John</strong>} age={16}></Welcome>
-          <Counter></Counter>
+          <Counter initVal={0} incInv={1000} incAm={1}></Counter>
 
       </div>
 
