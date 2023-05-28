@@ -63,10 +63,14 @@ export function Counter({initVal,incInv,incAm}) {
     });
 
     return (
-        <div>
-            <h1>Count: {count}</h1>
-        </div>
+       <CounterDisplay counts={count}></CounterDisplay>
     );
 }
 
-export default Counter;
+export function CounterDisplay({counts}){
+    return(
+        <div>
+            <h1>Count: {counts}</h1>
+        </div>
+    )
+}
