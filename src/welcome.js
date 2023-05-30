@@ -51,7 +51,7 @@ export function Counter({initVal,incInv,incAm}) {
     const [count, setCount] = useState(initVal);
 
     useEffect(function ()  {
-       var countInc = setInterval(function() {
+       let countInc = setInterval(function() {
             setCount(function (prevCount){
                 return prevCount + incAm
             });
@@ -70,7 +70,7 @@ export function Counter({initVal,incInv,incAm}) {
 export function CounterDisplay({counts}){
     return(
         <div>
-            <h1>Count: {counts}</h1>
+            <h1>Function Count: {counts}</h1>
         </div>
     )
 }

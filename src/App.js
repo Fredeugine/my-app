@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import {Welcome} from "./welcome";
 import {Counter} from "./welcome";
+import Counters from "./counters";
 
 
 function hello() {
@@ -11,6 +12,7 @@ function hello() {
           {message()}
           <Welcome name={<strong>John</strong>} age={16}></Welcome>
           <Counter initVal={0} incInv={1000} incAm={1}></Counter>
+          <Counters incAm={1} initVal={0} incInv={1000} ></Counters>
 
       </div>
 
