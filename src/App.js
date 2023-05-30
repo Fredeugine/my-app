@@ -5,6 +5,7 @@ import {Counter} from "./welcome";
 import Counters from "./counters";
 import {ClickCounter} from "./counters";
 import {ClickTracker} from "./counters";
+import {InteractiveWelcome} from "./welcome";
 
 
 function hello() {
@@ -17,6 +18,7 @@ function hello() {
           <Counters incAm={1} initVal={0} incInv={1000} ></Counters>
           <ClickCounter></ClickCounter>
           <ClickTracker></ClickTracker>
+          <InteractiveWelcome></InteractiveWelcome>
 
       </div>
 

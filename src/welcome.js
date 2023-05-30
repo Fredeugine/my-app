@@ -44,7 +44,29 @@ Welcome.defaultProps = {
     age: '10-20'
 };
 
+// Create an InteractiveWelcome component that renders an input tag and the Welcome component.
+//     Pass the current content of the input tag to the name prop of the Welcome component.
+//     The input tag should be a controlled component.
 
+export class InteractiveWelcome extends Component{
+    state = {
+        inputVal : ''
+    }
+    contComp = (event)=>{
+        this.setState({inputVal: event.target.value})
+    }
+
+    render() {
+        return(
+            <div>
+                <label>What is your name: </label>
+                <input  value={this.state.inputVal} onChange={this.contComp} type={"text"}/>
+                <Welcome name={this.state.inputVal}></Welcome>
+
+            </div>
+        )
+    }
+}
 
 
 export function Counter({initVal,incInv,incAm}) {
