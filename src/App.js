@@ -6,6 +6,7 @@ import Counters from "./counters";
 import {ClickCounter} from "./counters";
 import {ClickTracker} from "./counters";
 import {InteractiveWelcome} from "./welcome";
+import {Login} from "./similar files";
 
 
 function hello() {
@@ -19,6 +20,7 @@ function hello() {
           <ClickCounter></ClickCounter>
           <ClickTracker></ClickTracker>
           <InteractiveWelcome></InteractiveWelcome>
+          <Login></Login>
 
       </div>
 
