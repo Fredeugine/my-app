@@ -37,7 +37,7 @@ export class Login extends Component {
     state = {
         user: '',
         pass: '',
-        notEmpty: false
+        notEmpty: true
     };
 
     handleUsername = (event) => {
@@ -46,7 +46,7 @@ export class Login extends Component {
 
         this.setState({
             user: username,
-            notEmpty: password !== ''
+            notEmpty: password === ''
         });
     };
 
@@ -56,18 +56,27 @@ export class Login extends Component {
 
         this.setState({
             pass: password,
-            notEmpty: username !== ''
+            notEmpty: username === ''
         });
     };
+    reset = ()=>{
+        this.setState({
+            pass: '',
+            user: '',
+            notEmpty: true
+        });
+    };
+
 
     render() {
         return (
             <div>
                 <label>Username: </label>
-                <input type="text" onChange={this.handleUsername} />
+                <input value={this.state.user} type="text" onChange={this.handleUsername} />
                 <label>Password: </label>
-                <input type="text" onChange={this.handlePass} />
-                <button disabled={!this.state.notEmpty}>Login</button>
+                <input value={this.state.pass} type="text" onChange={this.handlePass} />
+                <button disabled={this.state.notEmpty}>Login</button>
+                <button onClick={this.reset}>Reset everything</button>
             </div>
         );
     }
