@@ -34,12 +34,10 @@ class Counters extends Component {
 // every time a user clicks on a button. Render both the current
 // value of the counter and the button within the ClickCounter component.
 export class ClickCounter extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
+
+        state = {
             count: 0
         }
-    }
 
         addOne = () => {
             this.setState(prevState => ({
@@ -54,4 +52,29 @@ export class ClickCounter extends Component{
               </div>
     }
 }
+
+export class ClickTracker extends Component {
+    state = {
+        lastButton: 'B'
+    };
+
+    lastClick = (event) =>{
+
+        this.setState({
+            lastButton: event.target.innerText
+        });
+    };
+
+    render() {
+        return (
+            <div>
+                <h1>{this.state.lastButton} was clicked last</h1>
+                <button onClick={this.lastClick}>Button 1</button>
+                <button onClick={this.lastClick}>Button 2</button>
+                <button onClick={this.lastClick}>Button 3</button>
+            </div>
+        );
+    }
+}
+
 export default Counters;
