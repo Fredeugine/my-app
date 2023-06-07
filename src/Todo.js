@@ -20,6 +20,9 @@ function inputVal(event){
         }
         return null;
     }
+    function clearList(){
+        setItems([])
+    }
 
     return (
         <>
@@ -33,6 +36,7 @@ function inputVal(event){
 
 
             }}>Add to List</button>
+            <button onClick={clearList}>Reset List</button>
             {createLi()}
         </>
 
