@@ -11,8 +11,15 @@ function inputVal(event){
         if (items.length > 0) {
             return (
                 <ul>
-                    {items.map(function (item) {
-                            return <li>{item}</li>
+                    {items.map(function (item,index) {
+                            return (
+                                <div>
+                                    <li>{item}</li>
+                                    <button onClick={()=>{
+                                        removeMe(index)
+                                    }}>Remove me</button>
+                                </div>
+                            )
                         }
                     )}
                 </ul>
@@ -22,6 +29,11 @@ function inputVal(event){
     }
     function clearList(){
         setItems([])
+    }
+    function removeMe(index){
+        let copyOfItems = [...items]
+        copyOfItems.splice(index,1)
+        setItems(copyOfItems)
     }
 
     return (
