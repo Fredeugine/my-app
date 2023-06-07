@@ -72,9 +72,9 @@ export class Login extends Component {
         return (
             <div>
                 <label>Username: </label>
-                <input value={this.state.user} type="text" onChange={this.handleUsername} />
+                <input autoFocus={true} type="text" onChange={this.handleUsername} />
                 <label>Password: </label>
-                <input value={this.state.pass} type="text" onChange={this.handlePass} />
+                <input  type="text" onChange={this.handlePass} />
                 <button disabled={this.state.notEmpty}>Login</button>
                 <button onClick={this.reset}>Reset everything</button>
             </div>
