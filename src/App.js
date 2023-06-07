@@ -7,7 +7,7 @@ import {ClickCounter} from "./counters";
 import {ClickTracker} from "./counters";
 import {InteractiveWelcome} from "./welcome";
 import {Login} from "./similar files";
-
+import {Todo} from "./Todo";
 
 function hello() {
   return (
@@ -21,7 +21,7 @@ function hello() {
           <ClickTracker></ClickTracker>
           <InteractiveWelcome></InteractiveWelcome>
           <Login></Login>
-
+          <Todo></Todo>
       </div>
 
   );
