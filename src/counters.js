@@ -1,4 +1,25 @@
-import React, { Component } from 'react';
+import React, {Component, useState} from 'react';
+
+export function ClickCounters(){
+
+    const [count,setCount]= useState(0)
+    function addOne(){
+        setCount(function (prevState){
+            return prevState + 1
+        })
+    }
+    return(
+        <div>
+            <p>This is a function component of the ClickCounter</p>
+            <button onClick={addOne}>Click me to Add 1</button>
+            <p>Counter: {count}</p>
+        </div>
+    )
+}
+
+
+
+
 
 export function CounterDisplay ({ countProp }){
     return <h1>Class Count:{countProp}</h1>;
@@ -46,10 +67,12 @@ export class ClickCounter extends Component{
         };
 
     render() {
-        return<div>
+        return(
+            <div>
                 <button onClick={this.addOne}>Click me to Add 1</button>
                 <p>Counter: {this.state.count}</p>
-              </div>
+            </div>
+        )
     }
 }
 
