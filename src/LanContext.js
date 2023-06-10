@@ -1,4 +1,5 @@
-import React, {createContext, useContext, useState} from "react";
+import React, {createContext, useContext, useEffect, useState} from "react";
+import {CounterDisplay} from "./welcome";
 
 const LanguageContext= createContext()
 
@@ -31,6 +32,24 @@ export function DisplayLanguage() {
     )
 }
 
+export function Counter({initVal,incInv,incAm}) {
+    const [count, setCount] = useState(initVal);
 
+    useEffect(function ()  {
+        let countInc = setInterval(function() {
+            setCount(function (prevCount){
+                return prevCount + incAm
+            });
+        }, incInv);
+
+        return function () {
+            clearInterval(countInc)
+        };
+    });
+
+    return (
+        <CounterDisplay counts={count}></CounterDisplay>
+    );
+}
 
 
