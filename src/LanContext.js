@@ -4,6 +4,7 @@ const LanguageContext= createContext()
 
 
 export function DisplayLanguage() {
+    // access the values of LanguageContext
     const { lang, setLng } = useContext(LanguageContext);
 
     return (
@@ -15,6 +16,7 @@ export function DisplayLanguage() {
                 <option>Twi</option>
                 <option>Spanish</option>
             </select>
+            <h1>Selected Language is {lang}</h1>
         </>
     )
 
