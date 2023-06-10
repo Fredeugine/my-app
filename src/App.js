@@ -12,6 +12,7 @@ import {ClickCounters} from "./counters";
 import {Login2} from "./similar files";
 import {Dd} from "./LanContext";
 import {FetchData} from "./FetchData";
+import {GithubUserList} from "./FetchData";
 
 function hello() {
     function onchange(event){
@@ -33,6 +34,7 @@ function hello() {
           <Login2></Login2>
           <Dd></Dd>
           <FetchData username={'lucy'}></FetchData>
+          <GithubUserList></GithubUserList>
       </div>
 
   );
