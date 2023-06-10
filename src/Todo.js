@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as events from "events";
+
 export function Todo(){
     const [items, setItems] = useState([]);
     const [val,setval]=useState('')
@@ -7,16 +7,16 @@ export function Todo(){
 function inputVal(event){
     setval(event.target.value)
 }
-    function createLi() {
-        if (items.length > 0) {
+    function createLi(ItemspropArr,funcRemoveMe) {
+        if (ItemspropArr.length > 0) {
             return (
                 <ul>
-                    {items.map(function (item,index) {
+                    {ItemspropArr.map(function (item,index) {
                             return (
                                 <div>
                                     <li>{item}</li>
                                     <button onClick={()=>{
-                                        removeMe(index)
+                                        funcRemoveMe(index)
                                     }}>Remove me</button>
                                 </div>
                             )
@@ -49,7 +49,8 @@ function inputVal(event){
 
             }}>Add to List</button>
             <button onClick={clearList}>Reset List</button>
-            {createLi()}
+            //Re
+            {createLi(items,removeMe)}
         </>
 
     )
