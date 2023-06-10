@@ -10,6 +10,7 @@ import {Login} from "./similar files";
 import {Todo} from "./Todo";
 import {ClickCounters} from "./counters";
 import {Login2} from "./similar files";
+import {Dd} from "./LanContext";
 
 function hello() {
   return (
@@ -26,6 +27,7 @@ function hello() {
           <Todo></Todo>
           <ClickCounters></ClickCounters>
           <Login2></Login2>
+          <Dd></Dd>
       </div>
 
   );
