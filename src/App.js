@@ -13,6 +13,9 @@ import {Login2} from "./similar files";
 import {Dd} from "./LanContext";
 
 function hello() {
+    function onchange(event){
+        return console.log('Counter changed to'+ {event})
+    }
   return (
       <div className="App">
         <h1>HELLO</h1>
@@ -25,7 +28,7 @@ function hello() {
           <InteractiveWelcome></InteractiveWelcome>
           <Login></Login>
           <Todo></Todo>
-          <ClickCounters></ClickCounters>
+          <ClickCounters onchg={onchange}></ClickCounters>
           <Login2></Login2>
           <Dd></Dd>
       </div>

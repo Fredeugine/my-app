@@ -1,8 +1,13 @@
-import React, {Component, useState} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 
-export function ClickCounters(){
-
+export function ClickCounters({onchg}){
     const [count,setCount]= useState(0)
+    // useffect for an onchange funtion
+    useEffect(function (){
+        onchg(count)
+    },[count])
+
+
     function addOne(){
         setCount(function (prevState){
             return prevState + 1
