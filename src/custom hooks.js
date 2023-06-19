@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export function Cshooks() {
+export function Chooks() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -21,7 +21,7 @@ export function Cshooks() {
 }
 
 
- export const Count = () => {
+ export function Count(){
     const [counter, setCounter] = useState(0);
 
     const increment = () => {

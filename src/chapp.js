@@ -1,9 +1,10 @@
 import React from 'react';
-import Cshooks from "./custom hooks";
+import {Chooks} from "./custom hooks";
+
 
 export function MyFormComponent() {
     //instantiating custom hooks
-    const { username, password, handleUsernameChange, handlePasswordChange } =  Cshooks();
+    const { username, password, handleUsernameChange, handlePasswordChange } =  Chooks();
 
     function handleSubmit(event) {
         event.preventDefault();

@@ -13,7 +13,8 @@ import {Login2} from "./similar files";
 import {Dd} from "./LanContext";
 import {FetchData, NumberDisplay} from "./FetchData";
 import {GithubUserList} from "./FetchData";
-import Chapp from "./chapp";
+import {MyFormComponent} from "./chapp";
+import {InCount} from "./counters";
 function hello() {
     function onchange(event){
         return console.log('Counter changed to'+ {event})
@@ -35,7 +36,8 @@ function hello() {
           <Dd></Dd>
           <FetchData username={'lucy'}></FetchData>
           <GithubUserList></GithubUserList>
-          <Chapp></Chapp>
+         <MyFormComponent></MyFormComponent>
+          <InCount></InCount>
       </div>
 
   );

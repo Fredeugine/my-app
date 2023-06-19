@@ -1,7 +1,8 @@
 import React, {Component, useEffect, useState} from 'react';
+import {Count} from "./custom hooks";
 
 //custom hooks
-export function MyComponent (){
+export function InCount (){
     const { counter, increment, decrement, reset } = Count();
 
     return (
