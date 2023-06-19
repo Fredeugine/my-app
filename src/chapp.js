@@ -1,7 +1,7 @@
 import React from 'react';
 import Cshooks from "./custom hooks";
 
-function MyFormComponent() {
+export function MyFormComponent() {
     //instantiating custom hooks
     const { username, password, handleUsernameChange, handlePasswordChange } =  Cshooks();
 
@@ -25,4 +25,4 @@ function MyFormComponent() {
     );
 }
 
-export default MyFormComponent;
+//Custom Hooks - useCounter

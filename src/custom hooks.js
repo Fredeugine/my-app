@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Cshooks() {
+export function Cshooks() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -20,4 +20,27 @@ function Cshooks() {
     };
 }
 
-export default Cshooks;
+
+ export const Count = () => {
+    const [counter, setCounter] = useState(0);
+
+    const increment = () => {
+        setCounter((prevCounter) => prevCounter + 1);
+    };
+
+    const decrement = () => {
+        setCounter((prevCounter) => prevCounter - 1);
+    };
+
+    const reset = () => {
+        setCounter(0);
+    };
+
+    return {
+        counter,
+        increment,
+        decrement,
+        reset,
+    };
+};
+

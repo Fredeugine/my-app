@@ -1,5 +1,20 @@
 import React, {Component, useEffect, useState} from 'react';
 
+//custom hooks
+export function MyComponent (){
+    const { counter, increment, decrement, reset } = Count();
+
+    return (
+        <div>
+            <p>Counter: {counter}</p>
+            <button onClick={increment}>Increment</button>
+            <button onClick={decrement}>Decrement</button>
+            <button onClick={reset}>Reset</button>
+        </div>
+    );
+};
+
+
 export function ClickCounters({onchg}){
     const [count,setCount]= useState(0)
     // useffect for an onchange funtion
