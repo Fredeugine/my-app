@@ -11,9 +11,9 @@ import {Todo} from "./Todo";
 import {ClickCounters} from "./counters";
 import {Login2} from "./similar files";
 import {Dd} from "./LanContext";
-import {FetchData} from "./FetchData";
+import {FetchData, NumberDisplay} from "./FetchData";
 import {GithubUserList} from "./FetchData";
-
+import Chapp from "./chapp";
 function hello() {
     function onchange(event){
         return console.log('Counter changed to'+ {event})
@@ -35,6 +35,7 @@ function hello() {
           <Dd></Dd>
           <FetchData username={'lucy'}></FetchData>
           <GithubUserList></GithubUserList>
+          <Chapp></Chapp>
       </div>
 
   );
