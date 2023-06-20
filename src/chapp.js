@@ -26,21 +26,11 @@ export function MyFormComponent() {
     );
 }
 
+
 // Extract the logic to fetch a Github user's data from the GithubUser component into a custom hook called useGithubUser.
 export function ShowUser(){
-    const {data,setData} = useGithubUser('lucy')
-    const fetchedData = Object.entries(data).map(function ([key, value]) {
-            if (key.length < 8){
-                return (
-                    <>
-                        <li>
-                            {key}:<strong>{value}</strong>
-                        </li>
-                    </>
-                )
-            }
-        }
-    );
+    const {data,setData,fetchedData,username} = useGithubUser('lucy')
+
     return(
         <>
             {fetchedData}

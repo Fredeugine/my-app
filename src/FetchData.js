@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 
-
-export function useGithubUser({username}){
+// modified  useGithubUser hook
+export function useGithubUser(username){
     const [data, setData] = useState({});
 
     useEffect(() => {
@@ -13,9 +13,23 @@ export function useGithubUser({username}){
 
         fetchData();
     }, [username]);
+    const fetchedData = Object.entries(data).map(function ([key, value]) {
+            if (key.length < 8){
+                return (
+                    <>
+                        <li>
+                            {key}:<strong>{value}</strong>
+                        </li>
+                    </>
+                )
+            }
+        }
+    );
     return {
         data,
-        setData
+        setData,
+        fetchedData,
+        username
     }
 }
 
