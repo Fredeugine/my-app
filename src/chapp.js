@@ -1,6 +1,6 @@
 import React from 'react';
 import {Chooks} from "./custom hooks";
-
+import {useGithubUser} from "./FetchData";
 
 export function MyFormComponent() {
     //instantiating custom hooks
@@ -24,6 +24,28 @@ export function MyFormComponent() {
             <button type="submit">Submit</button>
         </form>
     );
+}
+
+// Extract the logic to fetch a Github user's data from the GithubUser component into a custom hook called useGithubUser.
+export function ShowUser(){
+    const {data,setData} = useGithubUser('lucy')
+    const fetchedData = Object.entries(data).map(function ([key, value]) {
+            if (key.length < 8){
+                return (
+                    <>
+                        <li>
+                            {key}:<strong>{value}</strong>
+                        </li>
+                    </>
+                )
+            }
+        }
+    );
+    return(
+        <>
+            {fetchedData}
+        </>
+    )
 }
 
 //Custom Hooks - useCounter

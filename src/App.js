@@ -15,6 +15,7 @@ import {FetchData, NumberDisplay} from "./FetchData";
 import {GithubUserList} from "./FetchData";
 import {MyFormComponent} from "./chapp";
 import {InCount} from "./counters";
+import {ShowUser} from "./chapp";
 function hello() {
     function onchange(event){
         return console.log('Counter changed to'+ {event})
@@ -38,6 +39,8 @@ function hello() {
           <GithubUserList></GithubUserList>
          <MyFormComponent></MyFormComponent>
           <InCount></InCount>
+          <ShowUser></ShowUser>
+
       </div>
 
   );
