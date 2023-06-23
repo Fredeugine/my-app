@@ -16,6 +16,7 @@ import {GithubUserList} from "./FetchData";
 import {MyFormComponent} from "./chapp";
 import {InCount} from "./counters";
 import {ShowUser} from "./chapp";
+import {BrowserRouter, BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 function hello() {
     function onchange(event){
         return console.log('Counter changed to'+ {event})
@@ -27,6 +28,9 @@ function hello() {
     };
   return (
       <div className="App">
+          <Routes>
+              <Route path="/counter" element={<Counters></Counters>}></Route>
+          </Routes>
         <h1>HELLO</h1>
           {message()}
           <Welcome name={<strong>John</strong>} age={16}></Welcome>
