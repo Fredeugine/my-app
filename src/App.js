@@ -15,8 +15,9 @@ import {CarDetailsForm, FetchData, NumberDisplay, StudentDetails} from "./FetchD
 import {GithubUserList} from "./FetchData";
 import {MyFormComponent} from "./chapp";
 import {InCount} from "./counters";
-import {ShowUser} from "./chapp";
+import {ShowGithubUser} from "./chapp";
 import {BrowserRouter, BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 function hello() {
     function onchange(event){
         return console.log('Counter changed to'+ {event})
@@ -30,6 +31,7 @@ function hello() {
       <div className="App">
           <Routes>
               <Route path="/counter" element={<Counters></Counters>}></Route>
+              <Route path="users/:username" element={<ShowGithubUser></ShowGithubUser>}></Route>
           </Routes>
         <h1>HELLO</h1>
           {message()}
@@ -48,8 +50,9 @@ function hello() {
           <GithubUserList></GithubUserList>
          <MyFormComponent></MyFormComponent>
           <InCount></InCount>
-          <ShowUser></ShowUser>
+          <ShowGithubUser></ShowGithubUser>
           <CarDetailsForm initialdata={initialData}></CarDetailsForm>
+          <Li<p>showGithubuser</p>
 
       </div>
 

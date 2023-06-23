@@ -1,6 +1,8 @@
 import React from 'react';
 import {Chooks} from "./custom hooks";
 import {useGithubUser} from "./FetchData";
+import { useParams } from 'react-router-dom';
+
 
 export function MyFormComponent() {
     //instantiating custom hooks
@@ -28,8 +30,9 @@ export function MyFormComponent() {
 
 
 // Extract the logic to fetch a Github user's data from the GithubUser component into a custom hook called useGithubUser.
-export function ShowUser(){
-    const {data,setData,fetchedData,username} = useGithubUser('lucy')
+export function ShowGithubUser(){
+    const {username} = useParams()
+    const {data,setData,fetchedData} = useGithubUser({username})
 
     return(
         <>
