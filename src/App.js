@@ -11,7 +11,7 @@ import {Todo} from "./Todo";
 import {ClickCounters} from "./counters";
 import {Login2} from "./similar files";
 import {Dd} from "./LanContext";
-import {FetchData, NumberDisplay} from "./FetchData";
+import {CarDetailsForm, FetchData, NumberDisplay, StudentDetails} from "./FetchData";
 import {GithubUserList} from "./FetchData";
 import {MyFormComponent} from "./chapp";
 import {InCount} from "./counters";
@@ -20,6 +20,11 @@ function hello() {
     function onchange(event){
         return console.log('Counter changed to'+ {event})
     }
+    const initialData = {
+        model: 'io',
+        year: '1234',
+        color: 'red'
+    };
   return (
       <div className="App">
         <h1>HELLO</h1>
@@ -40,6 +45,7 @@ function hello() {
          <MyFormComponent></MyFormComponent>
           <InCount></InCount>
           <ShowUser></ShowUser>
+          <CarDetailsForm initialdata={initialData}></CarDetailsForm>
 
       </div>
 
