@@ -17,6 +17,7 @@ import {MyFormComponent} from "./chapp";
 import {InCount} from "./counters";
 import {ShowGithubUser} from "./chapp";
 import {BrowserRouter, BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function hello() {
     function onchange(event){
@@ -29,6 +30,7 @@ function hello() {
     };
   return (
       <div className="App">
+
           <Routes>
               <Route path="/counter" element={<Counters></Counters>}></Route>
               <Route path="users/:username" element={<ShowGithubUser></ShowGithubUser>}></Route>
@@ -52,7 +54,8 @@ function hello() {
           <InCount></InCount>
           <ShowGithubUser></ShowGithubUser>
           <CarDetailsForm initialdata={initialData}></CarDetailsForm>
-          <Li<p>showGithubuser</p>
+          <Link path={'users/:lucy'}><p>showGithubuser</p></Link>
+
 
       </div>
 
