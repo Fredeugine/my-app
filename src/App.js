@@ -34,6 +34,7 @@ function hello() {
           <Routes>
               <Route path="/counter" element={<Counters></Counters>}></Route>
               <Route path="users/:username" element={<ShowGithubUser></ShowGithubUser>}></Route>
+              <Route path="/Todo" element={<Todo></Todo>}></Route>
           </Routes>
         <h1>HELLO</h1>
           {message()}
@@ -54,7 +55,9 @@ function hello() {
           <InCount></InCount>
           <ShowGithubUser></ShowGithubUser>
           <CarDetailsForm initialdata={initialData}></CarDetailsForm>
-          <Link path={'users/:lucy'}><p>showGithubuser</p></Link>
+          <Link path={'users/:lucy'}><p>showGithubuser Link</p></Link>
+          <Link path={'/counter'}><p>Counter Link</p></Link>
+          <Link path={'/Todo'}><p>Todos Link</p></Link>
 
 
       </div>
