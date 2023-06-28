@@ -16,8 +16,9 @@ import {GithubUserList} from "./FetchData";
 import {MyFormComponent} from "./chapp";
 import {InCount} from "./counters";
 import {ShowGithubUser} from "./chapp";
-import {BrowserRouter, BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, BrowserRouter as Router, Route, Routes,Switch} from 'react-router-dom';
 import { Link } from "react-router-dom";
+import {NotFound} from "./NotFound";
 
 function hello() {
     function onchange(event){
@@ -32,9 +33,13 @@ function hello() {
       <div className="App">
 
           <Routes>
-              <Route path="/counter" element={<Counters></Counters>}></Route>
-              <Route path="users/:username" element={<ShowGithubUser></ShowGithubUser>}></Route>
-              <Route path="/Todo" element={<Todo></Todo>}></Route>
+              <Switch>
+                  <Route path="/counter" element={<Counters></Counters>}></Route>
+                  <Route path="users/:username" element={<ShowGithubUser></ShowGithubUser>}></Route>
+                  <Route path="/Todo" element={<Todo></Todo>}></Route>
+                  <Route path="*" element={<NotFound></NotFound>}></Route>
+
+              </Switch>
           </Routes>
         <h1>HELLO</h1>
           {message()}

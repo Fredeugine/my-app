@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useCallback } from 'react';
 
 export function Chooks() {
     const [username, setUsername] = useState('');
@@ -21,20 +21,21 @@ export function Chooks() {
 }
 
 
- export function Count(){
+
+export function Count() {
     const [counter, setCounter] = useState(0);
 
-    const increment = () => {
+    const increment = useCallback(() => {
         setCounter((prevCounter) => prevCounter + 1);
-    };
+    }, []);
 
-    const decrement = () => {
+    const decrement = useCallback(() => {
         setCounter((prevCounter) => prevCounter - 1);
-    };
+    }, []);
 
-    const reset = () => {
+    const reset = useCallback(() => {
         setCounter(0);
-    };
+    }, []);
 
     return {
         counter,
@@ -42,5 +43,4 @@ export function Chooks() {
         decrement,
         reset,
     };
-};
-
+}
