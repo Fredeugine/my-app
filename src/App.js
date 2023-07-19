@@ -29,6 +29,9 @@ function hello() {
         year: '1234',
         color: 'red'
     };
+    function OnLogin(){
+        return console.log('How are you Adrian?... and wife too :))')
+    }
   return (
       <div className="App">
 
@@ -60,6 +63,7 @@ function hello() {
           <Link path={'users/:lucy'}><p>showGithubuser Link</p></Link>
           <Link path={'/counter'}><p>Counter Link</p></Link>
           <Link path={'/Todo'}><p>Todos Link</p></Link>
+          <Login onLogins={OnLogin} ></Login>
 
 
       </div>

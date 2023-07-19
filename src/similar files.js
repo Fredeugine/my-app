@@ -1,4 +1,4 @@
-import React, {Component, useState} from "react";
+import React, {Component} from "react";
 
 
 export class Age extends React.Component {
@@ -33,52 +33,14 @@ export class Welcome extends React.Component {
     }
 }
 
-export function Login2(){
-    const [user,setUser]=useState('')
-    const [pass,setPass]=useState('')
-    const [notEmpty,setnotEmpty]=useState(true)
 
-    function handleUsername (event) {
-        const username = event.target.value;
-        const password = {pass};
-            setUser(username)
-            setnotEmpty( password === '')
-    }
-    function handlePass(event){
-        const password = event.target.value;
-        const username = {user}
-            setPass( password)
-            setnotEmpty(username === '')
-
-    }
-    function reset (){
-
-            setPass('')
-            setUser ('')
-            setnotEmpty(true)
-    }
-    return (
-        <div>
-            <label>Username: </label>
-            <input autoFocus={true} type="text" onChange={handleUsername} />
-            <label>Password: </label>
-            <input  type="text" onChange={handlePass} />
-            <button disabled={notEmpty}>Login</button>
-            <button onClick={reset}>Reset everything</button>
-            <br/>
-            <br/>
-            <br/>
-        </div>
-
-    );
-
-}
 
 export class Login extends Component {
+
     state = {
         user: '',
         pass: '',
-        notEmpty: true
+        notEmpty: false
     };
 
     handleUsername = (event) => {
@@ -87,7 +49,7 @@ export class Login extends Component {
 
         this.setState({
             user: username,
-            notEmpty: password === ''
+            notEmpty: password !== ''
         });
     };
 
@@ -97,28 +59,20 @@ export class Login extends Component {
 
         this.setState({
             pass: password,
-            notEmpty: username === ''
+            notEmpty: username !== ''
         });
     };
-    reset = ()=>{
-        this.setState({
-            pass: '',
-            user: '',
-            notEmpty: true
-        });
-    };
-
 
     render() {
         return (
             <div>
                 <label>Username: </label>
-                <input autoFocus={true} type="text" onChange={this.handleUsername} />
+                <input type="text" onChange={this.handleUsername} />
                 <label>Password: </label>
-                <input  type="text" onChange={this.handlePass} />
-                <button disabled={this.state.notEmpty}>Login</button>
-                <button onClick={this.reset}>Reset everything</button>
-            </div>
-        );
-    }
-}
+                <input type="text" onChange={this.handlePass} />
+                {/*Called the prop I passed in another file as  <Login onLogins={OnLogin} ></Login> */}
+                <button onClick={this.onLogins} disabled={!this.state.notEmpty}>Login</button>
+                </div>
+                );
+                }
+                }
